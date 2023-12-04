@@ -7,7 +7,7 @@ import Auth from "@/components/auth";
 import { useQuery } from "wagmi";
 import axios from "axios";
 
-function Scan() {
+function Booth() {
   const [size, setsize] = useState<[number | undefined, number | undefined]>([
     0, 0,
   ]);
@@ -155,4 +155,4 @@ function Scan() {
   );
 }
 
-export default Scan;
+export default Booth;
