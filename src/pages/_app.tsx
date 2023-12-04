@@ -32,10 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
         pauseOnHover
         theme="light"
       />
-      <Script
-        src="https://accounts.google.com/gsi/client"
-        strategy={"beforeInteractive"}
-      ></Script>
+
       <WalletProvider>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
