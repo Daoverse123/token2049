@@ -101,20 +101,28 @@ function Home() {
               </p>
             </span>
             <span className="flex flex-col ml-auto max-[1330px]:ml-0 max-[768px]:flex-row max-[768px]:items-center">
-              <p className="ml-auto text-[22.1px] max-[1330px]:text-1xl max-[768px]:ml-0 max-[768px]:text-base">
+              <p className="ml-auto text-[22.1px] max-[1330px]:text-1xl max-[768px]:ml-0 max-[768px]:text-base max-[375px]:text-sm">
                 Rewards
               </p>
-              <span className="flex items-center gap-2 max-[768px]:ml-4">
+              <span className="flex items-center gap-2 max-[768px]:ml-4 max-[375px]:ml-2">
                 <Coin />
-                <h1 className="text-[38.7px] font-[600] gradText max-[1330px]:text-3xl  max-[768px]:text-base">
+                <h1 className="text-[38.7px] font-[600] gradText max-[1330px]:text-3xl  max-[768px]:text-base max-[375px]:text-sm">
                   10000 XP
+                </h1>
+              </span>
+              <span className="flex flex-col items-end mt-3  max-[768px]:ml-auto">
+                <p className="text-base gradText max-[768px]:text-sm max-[375px]:text-xs">
+                  Powered by
+                </p>
+                <h1 className="text-2xl  max-[768px]:text-xl max-[375px]:text-base">
+                  SPONSOR
                 </h1>
               </span>
             </span>
           </div>
 
           <div
-            className={`flex flex-col gap-12 mt-[126px] max-[768px]:mt-[50px] `}
+            className={`flex flex-col gap-12 mt-[90px] max-[768px]:mt-[50px] `}
           >
             {!isLogedIn && (
               <div className="max-[768px]:flex-col  max-[768px]:mx-auto max-[768px]:gap-4  flex items-center justify-between border-2 rounded-3xl py-2 px-3 border-red-500 w-[95%] max-w-[750px] ">
