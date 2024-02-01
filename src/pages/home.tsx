@@ -97,7 +97,7 @@ function Home() {
                 Review speaker sessions
               </h1>
               <p className="text-[20px] font-[500] text-[#49536E] max-[1330px]:text-lg max-[768px]:text-base">
-                Get rewarded with truts XPs for reviewing the session.
+                Get rewarded with XPs for reviewing the speaker session.
               </p>
             </span>
             <span className="flex flex-col ml-auto max-[1330px]:ml-0 max-[768px]:flex-row max-[768px]:items-center">
@@ -144,9 +144,9 @@ function Home() {
                 !isLogedIn && "pointer-events-none"
               } flex w-full flex-col gap-8`}
             >
-              <Slider label="Do you feel a connection with the atmosphere and ethos prevalent in DAO communities?" />
-              <Slider label="Are you in harmony with the cultural and emotional tone of the DAO community?" />
-              <Slider label="Do you find yourself aligning with the spirit and energy characteristic of DAO communities?" />
+              <Slider label="How would you rate the speaker's knowledge and expertise on the topic discussed?" />
+              <Slider label="How effectively did the speaker engage the audience throughout the session?" />
+              <Slider label="To what extent did the speaker's presentation meet your expectations?" />
             </div>
           </div>
           {isLogedIn ? (
