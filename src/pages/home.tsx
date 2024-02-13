@@ -145,7 +145,7 @@ function Home() {
                   onClick={() => {
                     setshowAuth(true);
                   }}
-                  className="px-4 py-2 gradLR text-white rounded-3xl"
+                  className="px-4 py-2 bg-[#BF1C97] text-white rounded-3xl"
                 >
                   Login/Sign-up
                 </button>

@@ -65,9 +65,9 @@ export default function Home() {
 
       <span className="flex flex-col w-[378px] min-h-[242px] bg-white p-4 rounded-lg">
         <h3 className="text-[20px] font-normal">Let’s start by</h3>
-        <h1 className="text-[24px] font-semibold">Login/Sign up</h1>
+        <h1 className="text-[24px] font-semibold">Login/Sign-up</h1>
         <p className="text-[14px] font-normal m-0 p-0 mt-[16px]">
-          Sign up/login through wallet or Google Account to start your web3
+          Login/Sign-up through wallet or Google Account to start your web3
           journey. Don’t worry, we don’t store any data !
         </p>
 

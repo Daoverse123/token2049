@@ -43,7 +43,7 @@ function Nav({ showAuth }: { showAuth: () => any }) {
             onClick={() => {
               showAuth();
             }}
-            className=" ml-auto px-[28px] py-[9px] bg-red-400 rounded-[32px] gradLR text-white "
+            className=" ml-auto px-[28px] py-[9px] bg-[#BF1C97] rounded-[32px]  text-white "
           >
             Log in
           </button>

@@ -47,7 +47,7 @@ function Duplicate() {
                   <h1 className="text-[24px]">{user?.name}</h1>
                 </span>
               )}
-              <p className="mt-[30px] max-[768px]:text-center text-2xl font-[500] gradText">
+              <p className="mt-[30px] max-[768px]:text-center text-2xl font-[500] text-[#BF1C97]">
                 You have already redeemed your XP. Thank you for participating!
                 Stay tuned for more opportunities to earn and redeem points in
                 the future.
