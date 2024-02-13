@@ -26,11 +26,15 @@ function Booth() {
 
   let query = useQuery(["query"], async () => {
     try {
-      let res = await axios.post(`${process.env.API}/temp/qr`, {
-        headers: {
-          Authorization: `${localStorage.getItem("token")}`,
-        },
-      });
+      let res = await axios.post(
+        `${process.env.API}/temp/qr`,
+        {},
+        {
+          headers: {
+            Authorization: `${localStorage.getItem("token")}`,
+          },
+        }
+      );
       if (res.status == 201) {
         setisSuccess(true);
       }

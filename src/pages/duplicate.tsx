@@ -39,7 +39,7 @@ function Duplicate() {
                 <span className="flex items-center gap-3">
                   <picture className="w-[45.6px] h-[45.6px] bg-yellow-300 rounded-full flex overflow-hidden">
                     <img
-                      className="w-[45.6px] h-[45.6px] object-contain"
+                      className="w-[45.6px] h-[45.6px] object-cover"
                       src={user?.photo}
                       alt=""
                     />

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Qfont;
+  src: url("/qFont.otf") format("opentype");
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -89,7 +94,7 @@ body {
       height: 44px;
       background: red;
       border-radius: 50%;
-      background: linear-gradient(90deg, #f1a189 0.04%, #dc4caf 27.89%, #b128d3 60.53%, #5522e5 98.5%);
+      background: #400ab9;
       border: 8px solid #ffffff;
       cursor: pointer;
       box-shadow: 0 0 15px rgba(117, 117, 117, 0.287);
@@ -108,7 +113,7 @@ body {
       height: 44px;
       background: red;
       border-radius: 50%;
-      background: linear-gradient(90deg, #f1a189 0.04%, #dc4caf 27.89%, #b128d3 60.53%, #5522e5 98.5%);
+      background: #400ab9;
       border: 8px solid #ffffff;
       cursor: pointer;
       //box-shadow: 0 0 15px rgba(117, 117, 117, 0.856);
@@ -123,7 +128,7 @@ body {
 
     .sliderBar {
       display: flex;
-      background: linear-gradient(90deg, #f1a189 0.04%, #dc4caf 27.89%, #b128d3 60.53%, #5522e5 98.5%);
+      background: #400ab9;
       height: 8.3px;
       position: absolute;
       border-radius: 1.80172px;
