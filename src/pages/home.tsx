@@ -137,7 +137,7 @@ function Home() {
             className={`flex flex-col gap-12 mt-[90px] max-[768px]:mt-[20px] `}
           >
             {!isLogedIn && (
-              <div className="max-[768px]:flex-col  max-[768px]:mx-auto max-[768px]:gap-4  flex items-center justify-between border-2 rounded-3xl py-2 px-3 border-red-500 w-[95%] max-w-[750px] ">
+              <div className="max-[768px]:flex-col  max-[768px]:mx-auto max-[768px]:gap-4  flex items-center justify-between border-2 rounded-3xl py-2 px-3 outline-[#BF1C97] outline outline-2 w-[95%] max-w-[750px] ">
                 <h1 className="text-xl max-[768px]:text-base text-gray-600 text-center">
                   Please Login/Sign-up to Access the Form
                 </h1>

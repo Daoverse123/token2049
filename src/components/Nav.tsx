@@ -5,7 +5,7 @@ function Nav({ showAuth }: { showAuth: () => any }) {
   let { isLogedIn, isLoading, user } = useUser();
 
   return (
-    <div className="shadow-lg mt-[60px] h-[100px] w-[98%] max-w-[1300px] rounded-[36px] gradTB grid place-items-center max-[768px]:h-16 max-[768px]:w-[94%] max-[768px]:mt-4">
+    <div className="shadow-lg mt-[60px] h-[100px] w-[98%] max-w-[1300px] rounded-[36px] outline-[#BF1C97] outline outline-2 grid place-items-center max-[768px]:h-16 max-[768px]:w-[94%] max-[768px]:mt-4">
       <span className="flex w-[99.7%] h-[96%] bg-white rounded-[36px] px-[48px] items-center max-[768px]:px-4">
         {/* logo */}
         <picture

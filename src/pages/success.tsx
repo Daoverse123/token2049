@@ -92,7 +92,7 @@ function Success() {
               <picture>
                 <img
                   alt=""
-                  src="/bg.png"
+                  src="https://truts-event.s3.ap-south-1.amazonaws.com/event-random-3.webp"
                   className="flex mt-4 bg-black w-full rounded-[14px]"
                 />
               </picture>
