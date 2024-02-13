@@ -31,7 +31,7 @@ function Duplicate() {
       <div className="flex w-full min-h-screen flex-col items-center">
         <div
           id="area"
-          className=" shadow-lg mt-[60px] mb-[133px] max-w-[1300px] rounded-[36px] gradTB grid place-items-center relative w-[94%] h-fit overflow-hidden"
+          className=" mt-[60px] mb-[133px] max-w-[1300px] rounded-[36px]  grid place-items-center relative w-[94%] h-fit overflow-hidden"
         >
           <span className="flex flex-col w-[99.7%] h-[99.6%] bg-white rounded-[36px] px-[48px]  p-[60px]">
             <div className="flex flex-col items-center">
@@ -47,7 +47,7 @@ function Duplicate() {
                   <h1 className="text-[24px]">{user?.name}</h1>
                 </span>
               )}
-              <p className="mt-[30px] max-[768px]:text-center text-2xl font-[500] text-[#BF1C97]">
+              <p className="mt-[30px] max-[768px]:text-center text-2xl font-[500] text-[#400AB9]">
                 You have already redeemed your XP. Thank you for participating!
                 Stay tuned for more opportunities to earn and redeem points in
                 the future.
