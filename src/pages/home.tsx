@@ -183,7 +183,7 @@ function Home() {
               }}
               className="bg-[#BF1C97] text-white py-4 rounded-[12px] mt-[89px] max-[768px]:mt-16 max-[768px]:text-[16px]"
             >
-              Verify & Claim
+              Claim
             </button>
           ) : (
             <></>
