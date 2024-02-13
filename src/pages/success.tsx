@@ -84,16 +84,16 @@ function Success() {
             </span>
             <span className="flex flex-col items-center mt-8">
               <h1 className="text-[44px] max-[768px]:text-[28px]">
-                What’s Next?
+                What’s next?
               </h1>
               <p className="text-[26px] max-[768px]:text-[16px]">
-                Listen to other Speaker Sessions:
+                Listen to other speaker sessions:
               </p>
               <picture>
                 <img
                   alt=""
                   src="https://truts-event.s3.ap-south-1.amazonaws.com/event-random-3.webp"
-                  className="flex mt-4 bg-black w-full rounded-[14px]"
+                  className="flex mt-4 bg-black w-full rounded-[14px] h-[230px] object-cover"
                 />
               </picture>
             </span>
