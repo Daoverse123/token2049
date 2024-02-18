@@ -61,7 +61,12 @@ function Home() {
             healthcare. Your movement has value: you deserve a share in it.
           </p>
           <div className="flex w-full flex-wrap gap-4 my-6 justify-center">
-            <div className="flex w-[144px] flex-col">
+            <div
+              onClick={() => {
+                location.href = "/mission?mission=65d18b857e5375ee54afb0d5";
+              }}
+              className="flex w-[144px] flex-col"
+            >
               <picture className="w-[144px] h-[192]">
                 <img
                   src={
@@ -75,9 +80,14 @@ function Home() {
               <p className="text-[16px] font-semibold">
                 Join Sweatcoin Community
               </p>
-              <p className="text-[16px] font-semibold">400 XPs</p>
+              <p className="text-[16px] font-semibold">500 XPs</p>
             </div>
-            <div className="flex w-[144px] flex-col">
+            <div
+              onClick={() => {
+                location.href = "/quiz";
+              }}
+              className="flex w-[144px] flex-col"
+            >
               <picture className="w-[144px] h-[192]">
                 <img
                   src={
@@ -91,9 +101,14 @@ function Home() {
               <p className="text-[16px] font-semibold">
                 What is Sweatcoin Quiz
               </p>
-              <p className="text-[16px] font-semibold">200 XPs</p>
+              <p className="text-[16px] font-semibold">500 XPs</p>
             </div>
-            <div className="flex w-[144px] flex-col">
+            <div
+              onClick={() => {
+                location.href = "/mission?mission=65d18b857e5375ee54afb0d5";
+              }}
+              className="flex w-[144px] flex-col"
+            >
               <picture className="w-[144px] h-[192]">
                 <img
                   src={
@@ -107,9 +122,14 @@ function Home() {
               <p className="text-[16px] font-semibold">
                 Follow Sweatcoin on Socials
               </p>
-              <p className="text-[16px] font-semibold">400 XPs</p>
+              <p className="text-[16px] font-semibold">500 XPs</p>
             </div>
-            <div className="flex w-[144px] flex-col">
+            <div
+              onClick={() => {
+                location.href = "/mission?mission=65d18b857e5375ee54afb0d5";
+              }}
+              className="flex w-[144px] flex-col"
+            >
               <picture className="w-[144px] h-[192]">
                 <img
                   src={
@@ -123,7 +143,7 @@ function Home() {
               <p className="text-[16px] font-semibold">
                 What makes Sweatcoin unique
               </p>
-              <p className="text-[16px] font-semibold">200 XPs</p>
+              <p className="text-[16px] font-semibold">500 XPs</p>
             </div>
           </div>
         </div>

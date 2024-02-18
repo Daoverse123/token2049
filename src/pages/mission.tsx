@@ -199,7 +199,13 @@ function Missions() {
 
   return (
     <>
-      {showAuth && <Auth />}
+      {showAuth && (
+        <Auth
+          close={() => {
+            setshowAuth(false);
+          }}
+        />
+      )}
       <div className="flex flex-col w-full items-center ">
         <Nav />
         <div className="flex flex-col  w-full px-4 mb-14 mt-10">

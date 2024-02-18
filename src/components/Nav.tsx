@@ -30,7 +30,13 @@ function Nav() {
 
   return (
     <>
-      {showAuth && <Auth />}
+      {showAuth && (
+        <Auth
+          close={() => {
+            setShowAuth(false);
+          }}
+        />
+      )}
       <div className="shadow-lg mt-[60px] h-[100px] w-[98%] max-w-[1300px] rounded-[36px] outline-[#BF1C97] outline outline-2 grid place-items-center max-[768px]:h-16 max-[768px]:w-[94%] max-[768px]:mt-4">
         <span className="flex w-[99.7%] h-[96%] bg-white rounded-[36px] px-[48px] items-center max-[768px]:px-4">
           {/* logo */}
@@ -76,6 +82,19 @@ function MobileMenu() {
   let { isLoading, isLogedIn, user, logout } = useUser();
   let { openNav, setOpenNav, setShowAuth } = useNavStore();
 
+  let menu = [
+    "home",
+    "leaderboard",
+    "profile",
+    "rewards",
+    "floorplan",
+    "logout",
+  ];
+
+  if (!isLogedIn) {
+    menu = ["home", "leaderboard", "rewards", "floorplan"];
+  }
+
   return (
     <div className="p-6 z-10 flex flex-col fixed top-0 left-0 w-full h-screen bg-white">
       <div className="w-full flex">
@@ -120,14 +139,7 @@ function MobileMenu() {
         </span>
       </div>
       <div className="flex flex-col items-center gap-6 mt-16">
-        {[
-          "home",
-          "leaderboard",
-          "profile",
-          "rewards",
-          "floor plan",
-          "logout",
-        ].map((ele, idx) => {
+        {menu.map((ele, idx) => {
           return (
             <p
               style={ele == "logout" ? { color: "red" } : {}}
@@ -137,8 +149,8 @@ function MobileMenu() {
                 if (ele == "logout") {
                   return logout();
                 }
-                if (ele == "floor plan") {
-                  return (location.href = "https://token2049dubai.expofp.com/");
+                if (ele == "floorplan") {
+                  return window.open("/floorplan", "_blank");
                 } else {
                   return (location.href = `/${ele}`);
                 }

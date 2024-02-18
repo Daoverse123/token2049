@@ -127,7 +127,13 @@ function Review() {
 
   return (
     <div className="flex w-full min-h-screen flex-col items-center">
-      {showAuth && <Auth />}
+      {showAuth && (
+        <Auth
+          close={() => {
+            setshowAuth(false);
+          }}
+        />
+      )}
       <Nav />
       <div className="relative mt-[60px] max-[768px]:mt-[20px] mb-[133px] max-[768px]:mb-[54px] h-fit w-[100%] max-w-[1300px] rounded-[36px]  grid place-items-center">
         <span className="absolute top-[6%] left-[-22%] hidden max-[768px]:block">

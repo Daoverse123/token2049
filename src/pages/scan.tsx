@@ -99,7 +99,13 @@ function Scan() {
 
   return (
     <>
-      {showAuth && <Auth />}
+      {showAuth && (
+        <Auth
+          close={() => {
+            setshowAuth(false);
+          }}
+        />
+      )}
       <div className="flex w-full h-screen justify-center items-center">
         <div role="status">
           <svg

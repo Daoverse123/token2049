@@ -3,7 +3,7 @@ import Image from "next/image";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 import { use, useEffect, useState } from "react";
-
+import { Close } from "../../svgs";
 import { disconnect } from "@wagmi/core";
 import { ConnectButton, useConnectModal } from "@rainbow-me/rainbowkit";
 import { useAccount, useSignMessage } from "wagmi";
@@ -43,7 +43,7 @@ function signUpGoogle() {
   win.google.accounts.id.prompt(); // also display the One Tap dialog
 }
 
-export default function Home() {
+export default function Auth({ close }: { close: () => void }) {
   const [walletTrigger, setwalletTrigger] = useState(0);
   const [selectedAuth, setselectedAuth] = useState<string>("Email");
 
@@ -55,6 +55,14 @@ export default function Home() {
 
   return (
     <div className="flex w-full h-screen justify-center items-center bg-[#00000023] fixed z-50 ">
+      <span
+        onClick={() => {
+          close();
+        }}
+        className="absolute top-5 right-6 p-1 bg-white rounded-full"
+      >
+        <Close />
+      </span>
       {walletTrigger > 0 && (
         <WalletAuthTrigger
           key={walletTrigger + "trigger"}

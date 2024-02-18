@@ -26,7 +26,13 @@ function Duplicate() {
 
   return (
     <div className="flex w-full min-h-screen flex-col items-center">
-      {showAuth && <Auth />}
+      {showAuth && (
+        <Auth
+          close={() => {
+            setshowAuth(false);
+          }}
+        />
+      )}
       <Nav />
       <div className="flex w-full min-h-screen flex-col items-center">
         <div
