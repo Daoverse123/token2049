@@ -31,7 +31,7 @@ function Home() {
             }}
             className="text-[32px] text-[#400AB9] text-center mt-12"
           >
-            Partner Quests
+            Sweatcoin Quests
           </h2>
         </div>
         <div className="bg-[#F6F6F6] px-6 mt-6 flex flex-col justify-center">
@@ -45,14 +45,14 @@ function Home() {
               className="w-[178px] h-[39.5px]"
             />
           </picture>
-          <h1
+          {/* <h1
             style={{
               fontFamily: "Neue",
             }}
             className="font-bold text-[28px] text-center mt-4"
           >
             Sweatcoin Quests
-          </h1>
+          </h1> */}
           <p className="text-[16px] mt-2 text-center font-light pb-4">
             Sweatcoin is a free app which rewards your daily steps with a
             new-generation currency you can spend on cool products or donate to
