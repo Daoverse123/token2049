@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 function useUser() {
   const [isLogedIn, setisLogedIn] = useState(false);
   const [isLoading, setisLoading] = useState(true);
   const [user, setuser] = useState<{ name: string; photo: string }>();
+
+  const logout = async () => {
+    let res = await axios.get(`${process.env.API}/logout`, {
+      headers: {
+        Authorization: `${localStorage.getItem("token")}`,
+      },
+    });
+    if (res.status == 200) {
+      localStorage.removeItem("token");
+      location.reload();
+    }
+  };
 
   const fetchUser = async () => {
     let res = await axios.get(`${process.env.API}/user`, {
@@ -22,7 +35,7 @@ function useUser() {
       setisLogedIn(false);
       setisLoading(false);
     }
-    console.log(res.data);
+    // console.log(res.data);
   };
 
   useEffect(() => {
@@ -37,6 +50,7 @@ function useUser() {
     isLogedIn,
     isLoading,
     user,
+    logout,
   };
 }
 

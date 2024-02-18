@@ -54,7 +54,7 @@ export default function Home() {
   }, [selectedAuth]);
 
   return (
-    <div className="flex w-full h-screen justify-center items-center bg-[#00000023] fixed z-10 ">
+    <div className="flex w-full h-screen justify-center items-center bg-[#00000023] fixed z-50 ">
       {walletTrigger > 0 && (
         <WalletAuthTrigger
           key={walletTrigger + "trigger"}

@@ -5,31 +5,72 @@ import { useWindowSize } from "react-use";
 import useUser from "@/hooks/useUser";
 import Footer from "@/components/Footer";
 import Rings from "@/components/Rings";
+import axios from "axios";
+import { xpList, levelList } from "@/xpList";
 
 function Success() {
-  const [size, setsize] = useState<[number | undefined, number | undefined]>([
-    0, 0,
-  ]);
-  const { width, height } = useWindowSize();
+  let { isLogedIn, isLoading, user } = useUser();
+  const [progress, setprogress] = useState({
+    xp: 0,
+    level: 0,
+    width: 0,
+    nextXP: 0,
+  });
+
+  const calculateProgress = (totalxp: number) => {
+    // @ts-ignore
+    let level = 0;
+    Object.keys(xpList).forEach((ele, idx) => {
+      if (totalxp >= parseInt(ele)) {
+        level = xpList[ele].level;
+      }
+    });
+    // @ts-ignore
+    let width = (totalxp / levelList[level + 1].xp) * 100;
+
+    setprogress({
+      xp: totalxp,
+      level: level,
+      width: width,
+      // @ts-ignore
+      nextXP: levelList[level + 1].xp,
+    });
+  };
+
+  const getXp = async () => {
+    let res = await axios(
+      `${process.env.API}/listing/${process.env.DAO}/my-xps`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
+    if (res.status == 200) {
+      calculateProgress(res.data.data.totalListingXP - 500);
+      setTimeout(() => {
+        calculateProgress(res.data.data.totalListingXP);
+      }, 1000);
+    }
+  };
 
   useEffect(() => {
-    let area = document.querySelector("#area");
-    let w = area?.getBoundingClientRect().width;
-    let h = area?.getBoundingClientRect().height;
-    setsize([h, w]);
-  }, [width, height]);
-
-  let { isLogedIn, isLoading, user } = useUser();
+    getXp();
+  }, []);
 
   return (
     <div className="flex w-full min-h-screen flex-col items-center">
-      <Nav showAuth={() => {}} />
+      <Nav />
       <div className="flex w-full min-h-screen flex-col items-center">
         <div
           id="area"
           className="mt-[5px] mb-[20px] max-w-[1300px]   grid place-items-center relative h-fit overflow-hidden"
         >
-          {/* <Confetti width={size[1]} height={size[0]} numberOfPieces={100} /> */}
+          {progress.xp && (
+            <span className="absolute top-0 left-0 h-screen w-full">
+              <Confetti numberOfPieces={60} />
+            </span>
+          )}
           <span className="flex flex-col w-[99.7%] h-[99.6%] bg-white rounded-[36px] px-[12px]  p-[60px]">
             <div className="flex relative flex-col items-center">
               {isLogedIn && !isLoading && (
@@ -69,22 +110,27 @@ function Success() {
               </picture>
             </span>
             <span className="flex flex-col w-full max-[768px]:w-[260px] mx-auto">
-              <h1 className="text-[20px] mt-6">Level 15</h1>
+              <h1 className="text-[20px] mt-6">Level {progress.level}</h1>
               <span className="flex max-[768px]:flex-col items-center gap-4">
                 <div className="flex  w-full  h-[11.29px] bg-[#EEEFF2] rounded-full">
-                  <span className="flex w-[50%] h-full bg-[#2A0CCF] rounded-full"></span>
+                  <span
+                    style={{
+                      width: `${progress.width}%`,
+                    }}
+                    className="transition-all duration-1000 flex w-[0%] h-full bg-[#2A0CCF] rounded-full"
+                  ></span>
                 </div>
-                <h1 className="text-[18px] font-light min-w-fit">
-                  1000 / 1500{" "}
+                <h1 className="text-[18px] font-light min-w-fit ">
+                  {progress.xp} / {progress.nextXP}{" "}
                   <span className="text-[#2A0CCF] ml-3 font-semibold">
-                    +200 XPs
+                    +500 XPs
                   </span>
                 </h1>
               </span>
             </span>
             <span className="flex flex-col items-center mt-8">
               <h1 className="text-[44px] max-[768px]:text-[28px]">
-                What’s next?
+                What`s next?
               </h1>
               <p className="text-[26px] max-[768px]:text-[16px]">
                 Listen to other speaker sessions:

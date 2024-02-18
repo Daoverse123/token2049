@@ -51,7 +51,7 @@ function Booth() {
   return (
     <div className="flex w-full min-h-screen flex-col items-center">
       {showAuth && <Auth />}
-      <Nav showAuth={() => {}} />
+      <Nav />
       <div className="flex w-full min-h-screen flex-col items-center">
         {!isLogedIn && (
           <div
