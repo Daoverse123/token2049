@@ -217,7 +217,7 @@ function Missions() {
                 Join Sweatcoin Community
               </h1>
               <p className="font-bold flex items-center text-[20px] gap-2">
-                <Coin /> 400XPs
+                <Coin /> 500 XPs
               </p>
             </span>
           </span>

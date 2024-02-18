@@ -22,7 +22,7 @@ function Home() {
           </h1>
           <p className="font-light text-center text-[17.4px] mt-2">
             TOKEN2049 is premier crypto event, organized annually Dubai &
-            Singapore, where founders and executives of the leading Web3
+            Singapore, where founders and executives of the leading web3
             companies and projects share their view on the industry.{" "}
           </p>
           <h2

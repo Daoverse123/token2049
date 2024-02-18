@@ -16,25 +16,25 @@ function Rewards() {
           attain XPs and win rewards one must complete quests.
         </p>
         <div className="flex flex-col gap-1 mt-3">
-          <Faq question="What are Quests?">
+          <Faq question="What are quests?">
             Quests are tasks that a attendees need to complete to earn XPs and
             rewards.
             <h2 className="mt-4">There are two type of quests:</h2>
-            <p className="font-semibold">1. Review speaker sessions Visit</p>
-            <p className="font-semibold">2. sponsor booths</p>
+            <p className="font-semibold">1. Review speaker sessions visit</p>
+            <p className="font-semibold">2. Sponsor booths</p>
           </Faq>
-          <Faq question="how to Enter Quests">
-            <p className="font-semibold">1. Review speaker sessions Visit</p>
+          <Faq question="How to enter quests?">
+            <p className="font-semibold">1. Review speaker sessions visit</p>
             <p className="ml-4">
               After every speaker session there will be a QR code displayed on
-              the hall screen, scanthe QR code to review a speaker. After
+              the hall screen, scan the QR code to review a speaker. After
               submitting you will successfully be rewarded XPs for the same.
             </p>
             <p className="font-semibold mt-4">2. Visit sponsor booths</p>
             <p className="ml-4">
               Simply visit the partner booths and scan the QR code at the
-              booths. Scanning the QR code will verify your that you visited it
-              hence you will successfully be rewarded XPs for the same.
+              booths. Scanning the QR code will verify that you visited it hence
+              you will successfully be rewarded XPs for the same.
             </p>
           </Faq>
         </div>
@@ -69,6 +69,10 @@ const Distribution = ({ level }: { level: number }) => {
         <p className="mt-3 items-center flex text-[#5C657D]">
           Visit sponsor booths:
           <span className="text-[24px] ml-2 font-semibold">{booth}</span>
+        </p>
+        <p className="mt-3 items-center flex text-[#5C657D]">
+          Venue specials:
+          <span className="text-[24px] ml-2 font-semibold">{1}</span>
         </p>
         <p className="mt-4 text-[#BF1C97] font-semibold">Rewards:</p>
         <h1 className="font-semibold text-[#5C657D] text-[24px]">

@@ -103,6 +103,9 @@ function Profile() {
             <p className="text-[14px] flex items-center">
               Visit sponsor booths: <span className="text-[24px] ml-4">3</span>
             </p>
+            <p className="text-[14px] flex items-center">
+              Venue specials: <span className="text-[24px] ml-4">1</span>
+            </p>
             <span>
               <p className="text-[#BF1C97]">Rewards:</p>
               <h1 className="text-[24px] text-[#5C657D] font-semibold">
@@ -208,6 +211,7 @@ function Progress({
           {progress.nextXP} XPs
         </h1>
       </span>
+
       <span className="flex w-full flex-col items-center gap-4 mt-2">
         <div className="flex  w-full  h-[11.29px] bg-[#EEEFF2] rounded-full">
           <span

@@ -26,6 +26,8 @@ type LeaderboardType = {
 function Leaderboard({ leaderboard }: { leaderboard: LeaderboardType[] }) {
   let { isLoading, isLogedIn, user } = useUser();
 
+  console.log(leaderboard);
+
   return (
     <div className="flex flex-col w-full items-center ">
       <Nav />
@@ -124,7 +126,9 @@ const Position = ({
       >
         {limitCharacters(userData.user.name, 25)}
       </h1>
-      <p className="text-[10px] font-semibold ml-auto mr-1">3000 XPs</p>
+      <p className="text-[10px] font-semibold ml-auto mr-1">
+        {userData.totalListingXP} XPs
+      </p>
       <Coin />
     </div>
   );

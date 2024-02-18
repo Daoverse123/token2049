@@ -74,7 +74,12 @@ function Success() {
           <span className="flex flex-col w-[99.7%] h-[99.6%] bg-white rounded-[36px] px-[12px]  p-[60px]">
             <div className="flex relative flex-col items-center">
               {isLogedIn && !isLoading && (
-                <span className="flex flex-col items-center gap-3">
+                <span
+                  onClick={() => {
+                    location.href = "/profile";
+                  }}
+                  className="flex flex-col items-center gap-3"
+                >
                   <picture className="w-[45.6px] h-[45.6px] bg-yellow-300 rounded-full flex overflow-hidden">
                     <img
                       className="w-[70.6px] h-[70.6px] object-cover"
@@ -87,7 +92,7 @@ function Success() {
               )}
               <p className="mt-[20px] text-[18px] text-center">
                 Congratulations, you`ve earned{" "}
-                <span className="text-[#BF1C97]">200 XPs</span> for completing
+                <span className="text-[#BF1C97]">500 XPs</span> for completing
                 the mission!
               </p>
               <span className="absolute max-[768px]:block">

@@ -81,7 +81,12 @@ function MobileMenu() {
       <div className="w-full flex">
         <span className="flex justify-between w-full">
           {!isLoading && isLogedIn && (
-            <span className="flex items-center h-min gap-3">
+            <span
+              onClick={() => {
+                location.href = "/profile";
+              }}
+              className="flex items-center h-min gap-3"
+            >
               <picture>
                 <img
                   className="w-[49px] h-[49px] rounded-full"
@@ -115,30 +120,34 @@ function MobileMenu() {
         </span>
       </div>
       <div className="flex flex-col items-center gap-6 mt-16">
-        {["home", "leaderboard", "rewards", "floor plan", "logout"].map(
-          (ele, idx) => {
-            return (
-              <p
-                style={ele == "logout" ? { color: "red" } : {}}
-                className="text-[22.7px] uppercase cursor-pointer"
-                key={ele + idx}
-                onClick={() => {
-                  if (ele == "logout") {
-                    return logout();
-                  }
-                  if (ele == "floor plan") {
-                    return (location.href =
-                      "https://token2049dubai.expofp.com/");
-                  } else {
-                    return (location.href = `/${ele}`);
-                  }
-                }}
-              >
-                {ele}
-              </p>
-            );
-          }
-        )}
+        {[
+          "home",
+          "leaderboard",
+          "profile",
+          "rewards",
+          "floor plan",
+          "logout",
+        ].map((ele, idx) => {
+          return (
+            <p
+              style={ele == "logout" ? { color: "red" } : {}}
+              className="text-[22.7px] uppercase cursor-pointer"
+              key={ele + idx}
+              onClick={() => {
+                if (ele == "logout") {
+                  return logout();
+                }
+                if (ele == "floor plan") {
+                  return (location.href = "https://token2049dubai.expofp.com/");
+                } else {
+                  return (location.href = `/${ele}`);
+                }
+              }}
+            >
+              {ele}
+            </p>
+          );
+        })}
       </div>
     </div>
   );
