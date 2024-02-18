@@ -54,7 +54,7 @@ export default function Auth({ close }: { close: () => void }) {
   }, [selectedAuth]);
 
   return (
-    <div className="flex w-full h-screen justify-center items-center bg-[#00000023] fixed z-50 ">
+    <div className="flex w-full h-[100dvh] justify-center items-center bg-[#00000023] fixed z-50 ">
       <span
         onClick={() => {
           close();
