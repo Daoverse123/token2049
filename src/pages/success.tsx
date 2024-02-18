@@ -90,10 +90,17 @@ function Success() {
                   <h1 className="text-[24px]">{user?.name}</h1>
                 </span>
               )}
-              <p className="mt-[20px] text-[18px] text-center">
+              <p className="mt-[20px] text-[18px] text-center font-light">
                 Congratulations, you`ve earned{" "}
-                <span className="text-[#BF1C97]">500 XPs</span> for completing
-                the quest!
+                <span
+                  style={{
+                    fontFamily: "Inter",
+                  }}
+                  className="text-[#BF1C97] font-normal"
+                >
+                  500 XPs
+                </span>{" "}
+                for completing the quest!
               </p>
               <span className="absolute max-[768px]:block">
                 <Rings />
