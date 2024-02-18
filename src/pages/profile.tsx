@@ -66,7 +66,7 @@ function Profile() {
             //@ts-ignore
             let xp = levelList[ele].xp;
             //@ts-ignore
-            if (ele >= progress.level) {
+            if (ele > progress.level) {
               return null;
             }
             return (
@@ -89,10 +89,10 @@ function Profile() {
               <PurpleTick />
             </span>
             <h1 className="text-[#400AB9] text-[24px] ml-[18px]">
-              Level {progress.level}
+              Level {progress.level + 1}
             </h1>
             <p className="text-[#400AB9] text-[24px] ml-auto">
-              {progress.xp} XPs
+              {progress.nextXP} XPs
             </p>
           </span>
           <span className="flex flex-col ml-[54px] gap-2 my-3">
@@ -129,7 +129,7 @@ function Profile() {
             return (
               <Level
                 key={"c" + idx}
-                status="COMPLETED"
+                status="PENDING"
                 pos={parseInt(ele)}
                 xp={xp}
               />
@@ -155,9 +155,7 @@ function Profile() {
                 />
               </picture>
             )}
-            <h1 className="text-[20.4px] font-semibold mt-2">
-              Satoshi Nakamoto
-            </h1>
+            <h1 className="text-[20.4px] font-semibold mt-2">{user?.name}</h1>
           </span>
           <Progress progress={progress} />
         </div>

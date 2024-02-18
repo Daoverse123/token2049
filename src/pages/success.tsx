@@ -93,7 +93,7 @@ function Success() {
               <p className="mt-[20px] text-[18px] text-center">
                 Congratulations, you`ve earned{" "}
                 <span className="text-[#BF1C97]">500 XPs</span> for completing
-                the mission!
+                the quest!
               </p>
               <span className="absolute max-[768px]:block">
                 <Rings />
@@ -134,8 +134,8 @@ function Success() {
               </span>
             </span>
             <span className="flex flex-col items-center mt-8">
-              <h1 className="text-[44px] max-[768px]:text-[28px]">
-                What`s next?
+              <h1 className="text-[44px] font-semibold max-[768px]:text-[28px]">
+                What’s next?
               </h1>
               <p className="text-[26px] max-[768px]:text-[16px]">
                 Listen to other speaker sessions:
