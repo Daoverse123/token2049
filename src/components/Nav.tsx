@@ -96,7 +96,7 @@ function MobileMenu() {
   }
 
   return (
-    <div className="p-6 z-10 flex flex-col fixed top-0 left-0 w-full h-[100dvh] bg-white">
+    <div className="p-6 z-40 flex flex-col fixed top-0 left-0 w-full h-[100dvh] bg-white">
       <div className="w-full flex">
         <span className="flex justify-between w-full">
           {!isLoading && isLogedIn && (
