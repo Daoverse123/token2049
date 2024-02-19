@@ -150,7 +150,10 @@ function MobileMenu() {
                   return logout();
                 }
                 if (ele == "floorplan") {
-                  return window.open("/floorplan", "_blank");
+                  return window.open(
+                    "https://token2049dubai.expofp.com",
+                    "_blank"
+                  );
                 } else {
                   return (location.href = `/${ele}`);
                 }

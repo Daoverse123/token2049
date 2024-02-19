@@ -7,23 +7,23 @@ function Home() {
   return (
     <div className="flex flex-col w-full items-center ">
       <Nav />
-      <div className="flex flex-col  w-full  mt-10">
-        <div className="flex flex-col px-4 relative overflow-hidden">
-          <span className="absolute flex w-full justify-center top-20 pr-6 scale-125">
+      <div className="flex flex-col   w-full  mt-10">
+        <div className="flex flex-col items-center px-4 relative overflow-hidden">
+          {/* <span className="absolute flex w-full justify-center top-20 pr-6 scale-125">
             <Rings />
-          </span>
+          </span> */}
           <h1
             style={{
               fontFamily: "Neue",
             }}
-            className="text-[28px] font-bold text-center uppercase"
+            className="text-[28px] font-bold uppercase text-center "
           >
             We Bring Together the Leading voices in Crypto
           </h1>
-          <p className="font-light text-center text-[17.4px] mt-2">
+          <p className="font-light w-[88%] text-[17.4px] mt-2">
             TOKEN2049 is premier crypto event, organized annually Dubai &
             Singapore, where founders and executives of the leading web3
-            companies and projects share their view on the industry.{" "}
+            companies and projects share their view on the industry.
           </p>
           <h2
             style={{
@@ -31,11 +31,11 @@ function Home() {
             }}
             className="text-[32px] text-[#400AB9] text-center mt-12"
           >
-            Sweatcoin Quests
+            TOKEN2049 Quests
           </h2>
         </div>
-        <div className="bg-[#F6F6F6] px-6 mt-6 flex flex-col justify-center">
-          <picture className="mx-auto mt-8">
+        <div className="bg-[#F6F6F6] px-6 mt-6 flex flex-col items-center justify-center">
+          {/* <picture className="mx-auto mt-8">
             <img
               src="https://sweatco.in/static/media/header__logo.1fc7a1ce.svg"
               alt=""
@@ -44,16 +44,16 @@ function Home() {
               }}
               className="w-[178px] h-[39.5px]"
             />
-          </picture>
-          {/* <h1
+          </picture> */}
+          <h1
             style={{
               fontFamily: "Neue",
             }}
             className="font-bold text-[28px] text-center mt-4"
           >
-            Sweatcoin Quests
-          </h1> */}
-          <p className="text-[16px] mt-2 text-center font-light pb-4">
+            Powered by Sweatcoin
+          </h1>
+          <p className="text-[16px] mt-2 w-[96%]  font-light pb-4">
             Sweatcoin is a free app which rewards your daily steps with a
             new-generation currency you can spend on cool products or donate to
             charity. Why? Because when you look after your health, you benefit

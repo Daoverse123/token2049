@@ -102,9 +102,9 @@ function Success() {
                 </span>{" "}
                 for completing the quest!
               </p>
-              <span className="absolute max-[768px]:block">
+              {/* <span className="absolute max-[768px]:block">
                 <Rings />
-              </span>
+              </span> */}
             </div>
             <span className="flex  flex-col max-[768px]:gap-2  justify-center  mt-6  max-[768px]:ml-0 max-[768px]:flex-row max-[768px]:items-center">
               <p className="text-[16px] min-[768px]:text-center font-semibold max-[768px]:text-[16px] text-[#400AB9] max-[768px]:text-sm max-[375px]:text-xs">
