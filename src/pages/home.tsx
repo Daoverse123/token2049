@@ -33,8 +33,23 @@ function Home() {
           >
             TOKEN2049 Quests
           </h2>
+          <span className="flex  flex-col max-[768px]:gap-2  justify-center  mt-1  max-[768px]:ml-0 max-[768px]:flex-row max-[768px]:items-center">
+            <p className="text-[16px] min-[768px]:text-center font-semibold max-[768px]:text-[16px] text-[#400AB9] max-[768px]:text-sm max-[375px]:text-xs">
+              Powered by
+            </p>
+            <picture className="flex min-[768px]:justify-center">
+              <img
+                src="https://sweatco.in/static/media/header__logo.1fc7a1ce.svg"
+                alt=""
+                style={{
+                  filter: "invert(0.3)",
+                }}
+                className=" h-[39.5.3px] max-[768px]:w-[178px] mt-1"
+              />
+            </picture>
+          </span>
         </div>
-        <div className="bg-[#F6F6F6] px-6 mt-6 flex flex-col items-center justify-center">
+        <div className="bg-[#F6F6F6] px-6 pt-6 mt-6 flex flex-col items-center justify-center">
           {/* <picture className="mx-auto mt-8">
             <img
               src="https://sweatco.in/static/media/header__logo.1fc7a1ce.svg"
@@ -45,14 +60,14 @@ function Home() {
               className="w-[178px] h-[39.5px]"
             />
           </picture> */}
-          <h1
+          {/* <h1
             style={{
               fontFamily: "Neue",
             }}
             className="font-bold text-[28px] text-center mt-4"
           >
             Powered by Sweatcoin
-          </h1>
+          </h1> */}
           <p className="text-[16px] mt-2 w-[96%]  font-light pb-4">
             Sweatcoin is a free app which rewards your daily steps with a
             new-generation currency you can spend on cool products or donate to
