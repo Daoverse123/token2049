@@ -137,7 +137,7 @@ function Review() {
       <Nav />
       <div className="relative mt-[60px] max-[768px]:mt-[20px] mb-[133px] max-[768px]:mb-[54px] h-fit w-[100%] max-w-[1300px] rounded-[36px]  grid place-items-center">
         <span className="absolute top-[6%] left-[-22%] hidden max-[768px]:block">
-          <Rings />
+          {/* <Rings /> */}
         </span>
         <span className="flex flex-col w-[99.7%] max-[768px]:w-[98.4%] max-[768px]:h-[99%] h-[99.6%] bg-white rounded-[36px] px-[48px]  p-[60px] max-[768px]:p-8 max-[425px]:p-6">
           <div className="flex justify-between w-full max-[768px]:flex-col-reverse ">
